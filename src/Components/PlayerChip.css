@@ -1,0 +1,21 @@
+.player-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 1rem;
+    border: none;
+    padding: 0;
+    height: 2rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
+
+.player-chip img {
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.player-chip span {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
