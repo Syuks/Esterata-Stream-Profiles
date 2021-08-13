@@ -1,11 +1,33 @@
 import "./PlayerChip.css"
 
-function PlayerChip ({ name }) {
+function PlayerChip ({ player, bannerPlayers, setBannerPlayers, deletePlayer }) {
+
+    const onChipClicked = () => {
+        setBannerPlayers(oldPlayers => {
+            let newPlayers = [...oldPlayers]
+
+            const playerIndex = newPlayers.findIndex(p => {
+                return p.steamid === player.steamid
+            })
+
+            if (playerIndex !== -1) {
+                newPlayers.splice(playerIndex, 1)
+            } else {
+                newPlayers.splice(1, 1, player)
+            }
+            
+            return newPlayers
+        })
+    }
+
     return (
-        <button className="player-chip">
-            <img src="/images/Syuks_full.jpg" alt="player1" />
-            <span>{name}</span>
-        </button>
+        <div className="player-chip">
+            <button className={`player-button ${bannerPlayers.includes(player) ? "active" : ""}`} onClick={onChipClicked}>
+                <img src={player.avatar} alt={player.name} />
+                <span>{player.name}</span>
+            </button>
+            <button className="delete-button" onClick={e => deletePlayer(player)}>x</button>
+        </div>
     )
 }
 

@@ -1,0 +1,46 @@
+.autocomplete {
+    position: relative;
+    display: flex;
+}
+
+.autocomplete input {
+    width: 100%;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: rgba(255,255,255,0.86);
+    font-size: 0.875rem;
+    padding: 0.65625rem 0.65625rem;
+}
+
+.autocomplete .dropdown {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 170px;
+    transform: translateY(-2.6rem);
+    background-color: #2b2b2b;
+    box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+}
+
+.autocomplete input:focus + .dropdown {
+    display: flex;
+}
+
+.autocomplete .dropdown button {
+    background: none;
+    border: none;
+    padding: 0.75rem 0.75rem;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1rem;
+    text-align: left;
+}
+
+.autocomplete .dropdown button:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}

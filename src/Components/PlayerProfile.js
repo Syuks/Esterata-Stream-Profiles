@@ -1,41 +1,54 @@
 import "./PlayerProfile.css"
 
-function PlayerProfile ({ inverted }) {
+import PlayerCountry from "../Utils/PlayerCountry"
+
+function PlayerProfile ({ player, inverted, bannerPlayers }) {
     return (
-        <div className="player" style={{flexDirection: inverted ? "row-reverse" : "row"}}>
-            <div className="avatar">
-                <img className="avatar-image" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a4/a4c507b8f8f13f90a3a213185a394ac3fe2dcc85_full.jpg" alt="playerAvatar" />
+        <div style={{width: "40%"}}>
+
+            <div className="player" style={{flexDirection: inverted ? "row-reverse" : "row"}}>
+                <div className="avatar">
+                    <img className="avatar-image" src={player.avatarfull} alt="playerAvatar" />
+                </div>
+                <div className="info-col" style={{
+                    marginLeft: inverted ? 0 : "3rem",
+                    marginRight: inverted ? "3rem" : 0,
+                    textAlign: inverted ? "end" : "start",
+                    overflow: bannerPlayers.length > 1 ? "hidden" : "unset"
+                }}>
+                    <div className="info-name">{player.name}</div>
+                    <div className={`info-rank ${player.rank}`}>{player.rank}</div>
+                    <div className="info-points">{`${player.points.toLocaleString()} (${player.avg})`}</div>
+                </div>
             </div>
-            <div className="medals" style={{marginLeft: inverted ? 0 : "3rem", marginRight: inverted ? "3rem" : 0}}>
-                <div className="medal wr-medal">
-                    <img src="/images/medals/WRs.png" alt="WRsMedal" />
-                    <span className="wr-badge">1</span>
+
+            <div className="bottom-row" style={{flexDirection: inverted ? "row-reverse" : "row"}}>
+                <div className="country-box">
+                    <div className="country-name">{PlayerCountry(player.loc)}</div>
+                    <div>
+                        <img title={player.loc} alt={player.loc} src={`/flags/${player.loc}.png`}/>
+                    </div>
                 </div>
-                <div className="medal red-medal">
-                    <img src="/images/medals/900s.png" alt="900sMedal" />
-                    <span className="red-badge">1</span>
+                <div className="medals" style={{flexDirection: inverted ? "row-reverse" : "row"}}>
+                    <div className="medal">
+                        <div className="medal-image">
+                            <img src={`/images/medals/WRs${player.wrs === 0 ? "-empty" : ""}.png`} alt="WRsMedal" />
+                        </div>
+                        <div className="medal-count">{player.wrs}</div>
+                    </div>
+                    <div className="medal">
+                        <div className="medal-image">
+                            <img src={`/images/medals/900s${player.reds === 0 ? "-empty" : ""}.png`} alt="900sMedal" />
+                        </div>
+                        <div className="medal-count">{player.reds}</div>
+                    </div>
+                    <div className="medal">
+                        <div className="medal-image">
+                            <img src={`/images/medals/800s${player.blues === 0 ? "-empty" : ""}.png`} alt="800sMedal" />
+                        </div>
+                        <div className="medal-count">{player.blues}</div>
+                    </div>
                 </div>
-                <div className="medal blue-medal">
-                    <img src="/images/medals/800s.png" alt="800sMedal" />
-                    <span className="blue-badge">1</span>
-                </div>
-            </div>
-            <div className="info-col" style={{
-                marginLeft: inverted ? 0 : "3rem",
-                marginRight: inverted ? "3rem" : 0,
-                textAlign: inverted ? "end" : "start"
-            }}>
-                <div className="info-name">
-                    {inverted && 
-                        <img title="AR" alt="AR" src="/flags/AR.png" style={{marginRight: "1.25rem"}}/>
-                    }
-                    <span>Syuks</span>
-                    {!inverted && 
-                        <img title="AR" alt="AR" src="/flags/AR.png" style={{marginLeft: "1.25rem"}}/>
-                    }
-                </div>
-                <div className="info-rank">NEWBIE</div>
-                <div className="info-points">975 (487.50)</div>
             </div>
         </div>
     )

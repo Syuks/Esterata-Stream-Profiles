@@ -1,3 +1,7 @@
+:root {
+  color-scheme: dark;
+}
+
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -40,18 +44,105 @@ button {
   font-family: inherit;
   background: #9FA8DA;
   cursor: pointer;
+  color: #121212;
 }
 
-button:hover {
-  background: rgba(159, 168, 218, 0.86);
+button:disabled {
+  opacity: 0.6;
+  color: rgba(16, 16, 16, 0.3);
+}
+
+button:hover:not(:disabled) {
+  background: rgb(135, 141, 180);
 }
 
 button:active {
-  background: rgba(159, 168, 218, 0.86);
+  background: rgb(120, 127, 167);
   box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 75%) inset;
   transform: translateY(1px);
 }
 
+.stylized-button {
+  font-size: 0.875rem;
+  padding: 0.571rem 0.75rem;
+  border: none;
+  font-weight: 500;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.stylized-button.button-text {
+  background: none;
+  color: #9FA8DA;
+}
+
+.stylized-button.button-text:hover {
+  background: rgba(159, 168, 218, 0.04);
+}
+
 input {
   font-family: inherit;
+}
+
+/* RANK */
+
+.GOD{
+  color: #e3ad39;
+}
+.DEMIGOD{
+  color: #ecc166;
+}
+.PRO\+{
+  color: #fe0000;
+}
+.PRO{
+  color: #ff2929;
+}
+.SEMIPRO\+{
+  color: #f9690e;
+}
+.SEMIPRO{
+  color: #f27935;
+}
+.EXPERT\+{
+  color: #d22ce5;
+}
+.EXPERT{
+  color: #da5ee8;
+}
+.SKILLED\+{
+  color: #3254fc;
+}
+.SKILLED{
+  color: #5975ff;
+}
+.REGULAR\+{
+  color: #5e97d8;
+}
+.REGULAR{
+  color: #658cb9;
+}
+.CASUAL\+{
+  color: #67809f;
+}
+.CASUAL{
+  color: #6c7a89;
+}
+.TRAINEE\+{
+  color: #919ca8;
+}
+.TRAINEE{
+  color: #bdc3c7;
+}
+.SCRUB\+{
+  color: #dadfe1;
+}
+.SCRUB{
+  color: #eeeeee;
+}
+.NEWBIE\+{
+  color: #ffffff;
+}
+.NEWBIE{
+  color: #ffffff;
 }

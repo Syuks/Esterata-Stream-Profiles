@@ -1,15 +1,59 @@
 .player-chip {
-    display: inline-flex;
+    /*display: inline-flex;
     align-items: center;
     border-radius: 1rem;
-    border: none;
+    border: 3px solid #9FA8DA;
     padding: 0;
     height: 2rem;
     font-weight: 500;
     font-size: 0.875rem;
-    margin-left: 0.5rem;
+    margin-left: 0.5rem;*/
+    display: inline-flex;
+    position: relative;
+    height: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 3px solid #9FA8DA;
+    box-sizing: border-box;
+    background-color: #9FA8DA;
+    margin: 0.25rem;
 }
 
+.player-chip .player-button {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    height: 100%;
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.player-chip .player-button.active {
+    background: rgb(120, 127, 167);
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 75%) inset;
+    transform: translateY(1px);
+}
+
+.player-chip .player-button img {
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.player-chip .player-button span {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.player-chip .delete-button {
+    height: 100%;
+    border: none;
+    padding: 0 0.5rem 0 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/*
 .player-chip img {
     height: 100%;
     border-radius: 1rem;
@@ -18,4 +62,4 @@
 .player-chip span {
     margin-left: 0.5rem;
     margin-right: 1rem;
-}
+}*/

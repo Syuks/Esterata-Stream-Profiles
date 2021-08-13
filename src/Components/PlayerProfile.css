@@ -1,6 +1,5 @@
 .player {
-    display: inline-flex;
-    flex: 1;
+    display: flex;
 }
 
 .player .avatar {
@@ -12,83 +11,18 @@
     width: 184px;
 }
 
-.player .medals {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.player .medals .medal {
-    position: relative;
-    color: rgba(255,255,255,0.86);
-}
-
-.player .medals .medal .red-badge {
-    background-color: #701018;
-}
-
-.player .medals .medal .blue-badge {
-    background-color: #164f89;
-}
-
-.player .medals .medal .red-badge,
-.player .medals .medal .blue-badge {
-    position: absolute;
-    font-size: .75rem;
-    border-radius: 15%;
-    padding: .15em .45em;
-    top: 0;
-    left: 34px;
-    user-select: none;
-}
-
-.player .medals .medal .wr-badge {
-    position: absolute;
-    font-size: .75rem;
-    background-color: #936e00;
-    border-radius: 15%;
-    padding: .15em .45em;
-    top: 10px;
-    left: 50px;
-    user-select: none;
-}
-
-.player .medals .medal.wr-medal {
-    margin-top: 0.5rem;
-}
-
-.player .medals .medal.red-medal {
-    margin-top: 0.875rem;
-}
-
-.player .medals .medal.blue-medal {
-    margin-top: 0.125rem;
-}
-
 .player .info-col .info-name {
     font-size: 5rem;
     font-weight: 300;
     color: white;
     margin-bottom: 0.5rem;
     white-space: nowrap;
-}
-
-.player .info-col .info-name span {
-    display: inline-block;
-    white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
-    max-width: 22rem;
-    vertical-align: text-bottom;
-}
-
-.player .info-col .info-name img {
-    vertical-align: middle;
 }
 
 .player .info-col .info-rank {
     font-size: 2.5rem;
-    color: white;
     margin-bottom: 0.5rem;
 }
 
@@ -97,4 +31,57 @@
     font-weight: 300;
     color: rgba(255,255,255,0.6);
     white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.bottom-row {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.bottom-row .country-box {
+    width: 184px;
+    height: 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.bottom-row .country-box .country-name {
+    color: rgba(255,255,255,0.86);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bottom-row .medals {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.bottom-row .medals .medal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.bottom-row .medals .medal .medal-image {
+    width: 84px;
+    height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bottom-row .medals .medal .medal-count {
+    color: rgba(255,255,255,0.86);
+    font-size: 1.5rem;
+    font-weight: 500;
 }
