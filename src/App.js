@@ -13,6 +13,9 @@ import PlayerRanking from './Utils/PlayerRanking'
 import Dialog from './Components/Dialog'
 import Autocomplete from './Components/Autocomplete'
 
+import vsImage from "./Images/vs.png"
+import esterataBackground from "./Images/background.png"
+
 import PlayerProfile from './Components/PlayerProfile'
 import PlayerChip from './Components/PlayerChip'
 
@@ -130,7 +133,7 @@ function App() {
     const autocompleteTemplate = (item) => {
         return (
             <div style={{display: "flex", alignItems:"center"}}>
-                <img width="24" title={item.Code} alt={item.Code} src={`/flags/${item.Code}.png`}/>
+                <img width="24" title={item.Code} alt={item.Code} src={`${process.env.PUBLIC_URL}/flags/${item.Code}.png`}/>
                 <span style={{marginLeft:"0.5rem"}}>{item.Name}</span>
             </div>
         )
@@ -151,7 +154,7 @@ function App() {
     },[nationalityInput])
 
     return (
-        <div className="canvas" style={{backgroundImage: showBackground ? "url(/images/background.png)" : "none"}}>
+        <div className="canvas" style={{backgroundImage: showBackground ? `url(${esterataBackground})` : "none"}}>
             <div className="stream-section">
                 <div className="players-row" style={{marginLeft: bannerPlayers.length === 1 ? "10rem" : 0}}>
                     {bannerPlayers.map((player, index) => {
@@ -164,7 +167,7 @@ function App() {
                             />
                         )
                     })}
-                    {bannerPlayers.length > 1 && <img className="vs-image" src="/images/vs.png" alt="vs" />}
+                    {bannerPlayers.length > 1 && <img className="vs-image" src={vsImage} alt="vs" />}
                 </div>
             </div>
             <div className="settings-section">

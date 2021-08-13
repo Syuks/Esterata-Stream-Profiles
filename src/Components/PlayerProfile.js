@@ -2,6 +2,13 @@ import "./PlayerProfile.css"
 
 import PlayerCountry from "../Utils/PlayerCountry"
 
+import WrMedal from "../Images/medals/WRs.png"
+import WrMedalEmpty from "../Images/medals/WRs-empty.png"
+import RedMedal from "../Images/medals/900s.png"
+import RedMedalEmpty from "../Images/medals/900s-empty.png"
+import BlueMedal from "../Images/medals/800s.png"
+import BlueMedalEmpty from "../Images/medals/800s-empty.png"
+
 function PlayerProfile ({ player, inverted, bannerPlayers }) {
     return (
         <div style={{width: "40%"}}>
@@ -26,25 +33,25 @@ function PlayerProfile ({ player, inverted, bannerPlayers }) {
                 <div className="country-box">
                     <div className="country-name">{PlayerCountry(player.loc)}</div>
                     <div>
-                        <img title={player.loc} alt={player.loc} src={`/flags/${player.loc}.png`}/>
+                        <img title={player.loc} alt={player.loc} src={`${process.env.PUBLIC_URL}/flags/${player.loc}.png`}/>
                     </div>
                 </div>
                 <div className="medals" style={{flexDirection: inverted ? "row-reverse" : "row"}}>
                     <div className="medal">
                         <div className="medal-image">
-                            <img src={`/images/medals/WRs${player.wrs === 0 ? "-empty" : ""}.png`} alt="WRsMedal" />
+                            <img src={player.wrs === 0 ? WrMedalEmpty : WrMedal} alt="WRsMedal" />
                         </div>
                         <div className="medal-count">{player.wrs}</div>
                     </div>
                     <div className="medal">
                         <div className="medal-image">
-                            <img src={`/images/medals/900s${player.reds === 0 ? "-empty" : ""}.png`} alt="900sMedal" />
+                            <img src={player.reds === 0 ? RedMedalEmpty : RedMedal} alt="900sMedal" />
                         </div>
                         <div className="medal-count">{player.reds}</div>
                     </div>
                     <div className="medal">
                         <div className="medal-image">
-                            <img src={`/images/medals/800s${player.blues === 0 ? "-empty" : ""}.png`} alt="800sMedal" />
+                            <img src={player.blues === 0 ? BlueMedalEmpty : BlueMedal} alt="800sMedal" />
                         </div>
                         <div className="medal-count">{player.blues}</div>
                     </div>
