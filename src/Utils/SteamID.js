@@ -103,7 +103,7 @@ export function isValidInput (myInput) {
 }
 
 function isValidSteamId64(steamID) {
-    //76561199039866117
+    //76561198267993933
     return /^[0-9]{17}$/.test(steamID)
 }
 
@@ -114,7 +114,7 @@ function isValidSteamId32(steamID) {
 
 function isValidSteamProfile(steamProfile) {
     //profiles is with steam64s
-    //https://steamcommunity.com/profiles/76561199039866117/
+    //https://steamcommunity.com/profiles/76561198267993933/
     return /^https:\/\/steamcommunity\.com\/profiles\/([0-9]{17})(?:\/)?$/.test(steamProfile)
 }
 

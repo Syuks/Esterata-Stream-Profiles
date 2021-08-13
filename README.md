@@ -8,10 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Supports these formats:
 
-  * Steam ID 64: `76561199039866117`
-  * Steam ID 32: `STEAM_1:1:153864102`
-  * Steam URL: `https://steamcommunity.com/profiles/76561199039866117/`
-  * Steam Vanity URL: `https://steamcommunity.com/id/Syuks/`
+    * Steam ID 64: `76561198267993933`
+    * Steam ID 32: `STEAM_1:1:153864102`
+    * Steam URL: `https://steamcommunity.com/profiles/76561199039866117/`
+    * Steam Vanity URL: `https://steamcommunity.com/id/Syuks/`
 
 2. Saves players' data in localStorage.
 
