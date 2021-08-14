@@ -2,6 +2,8 @@ import "./PlayerProfile.css"
 
 import PlayerCountry from "../Utils/PlayerCountry"
 
+import ScrambleText from "../Effects/ScrambleText"
+
 import WrMedal from "../Images/medals/WRs.png"
 import WrMedalEmpty from "../Images/medals/WRs-empty.png"
 import RedMedal from "../Images/medals/900s.png"
@@ -23,7 +25,7 @@ function PlayerProfile ({ player, inverted, bannerPlayers }) {
                     textAlign: inverted ? "end" : "start",
                     overflow: bannerPlayers.length > 1 ? "hidden" : "unset"
                 }}>
-                    <div className="info-name">{player.name}</div>
+                    <div className="info-name"><ScrambleText oldText="" newText={player.name} changeFrequency={0.2} maxDuration={150} charClass={player.rank}/></div>
                     <div className={`info-rank ${player.rank}`}>{player.rank}</div>
                     <div className="info-points">{`${player.points.toLocaleString()} (${player.avg})`}</div>
                 </div>

@@ -2,7 +2,7 @@ import "./PlayerChip.css"
 
 function PlayerChip ({ player, bannerPlayers, setBannerPlayers, deletePlayer }) {
 
-    const onChipClicked = () => {
+    const onChipClicked = (e) => {
         setBannerPlayers(oldPlayers => {
             let newPlayers = [...oldPlayers]
 
@@ -10,7 +10,9 @@ function PlayerChip ({ player, bannerPlayers, setBannerPlayers, deletePlayer }) 
                 return p.steamid === player.steamid
             })
 
-            if (playerIndex !== -1) {
+            if (e.shiftKey || e.ctrlKey || e.altKey) {
+                newPlayers = [player]
+            } else if (playerIndex !== -1) {
                 newPlayers.splice(playerIndex, 1)
             } else {
                 newPlayers.splice(1, 1, player)

@@ -12,6 +12,7 @@
 }
 
 .player .info-col .info-name {
+    height: 96px;
     font-size: 5rem;
     font-weight: 300;
     color: white;
