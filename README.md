@@ -21,6 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 5. Nationality editor for Steam profiles without country information.
 
+6. alt/ctrl/shift click a player's chip will show that player only.
+
 ## Available Scripts
 
 In the project directory, you can run:
