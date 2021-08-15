@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Esterata-Stream-Profiles/static/css/main.f564609f.chunk.css",
-    "main.js": "/Esterata-Stream-Profiles/static/js/main.0496f85b.chunk.js",
-    "main.js.map": "/Esterata-Stream-Profiles/static/js/main.0496f85b.chunk.js.map",
+    "main.css": "/Esterata-Stream-Profiles/static/css/main.b38c8bae.chunk.css",
+    "main.js": "/Esterata-Stream-Profiles/static/js/main.b9adbd9b.chunk.js",
+    "main.js.map": "/Esterata-Stream-Profiles/static/js/main.b9adbd9b.chunk.js.map",
     "runtime-main.js": "/Esterata-Stream-Profiles/static/js/runtime-main.2b8b13e5.js",
     "runtime-main.js.map": "/Esterata-Stream-Profiles/static/js/runtime-main.2b8b13e5.js.map",
     "static/js/2.8ac6bbd7.chunk.js": "/Esterata-Stream-Profiles/static/js/2.8ac6bbd7.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.2565a49c.chunk.js": "/Esterata-Stream-Profiles/static/js/3.2565a49c.chunk.js",
     "static/js/3.2565a49c.chunk.js.map": "/Esterata-Stream-Profiles/static/js/3.2565a49c.chunk.js.map",
     "index.html": "/Esterata-Stream-Profiles/index.html",
-    "static/css/main.f564609f.chunk.css.map": "/Esterata-Stream-Profiles/static/css/main.f564609f.chunk.css.map",
+    "static/css/main.b38c8bae.chunk.css.map": "/Esterata-Stream-Profiles/static/css/main.b38c8bae.chunk.css.map",
     "static/js/2.8ac6bbd7.chunk.js.LICENSE.txt": "/Esterata-Stream-Profiles/static/js/2.8ac6bbd7.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Esterata-Stream-Profiles/static/media/Roboto-Regular.a8d6ac03.ttf",
     "static/media/WRs.ee820b67.png": "/Esterata-Stream-Profiles/static/media/WRs.ee820b67.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.2b8b13e5.js",
     "static/js/2.8ac6bbd7.chunk.js",
-    "static/css/main.f564609f.chunk.css",
-    "static/js/main.0496f85b.chunk.js"
+    "static/css/main.b38c8bae.chunk.css",
+    "static/js/main.b9adbd9b.chunk.js"
   ]
 }
