@@ -40,7 +40,7 @@ export async function SteamProfile (identifier) {
 }
 
 export function SteamVanityURL (vanityURL) {
-    //https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key=023DC037A9187B9DD374365F858B5545&vanityurl=Syuks
+    //https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key={key}&vanityurl=Syuks
     
     const url = 'steam/vanity'
 
