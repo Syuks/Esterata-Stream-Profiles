@@ -7,7 +7,7 @@ const globalAPI = axios.create({
 })
 
 const steamAPI = axios.create({
-    baseURL: 'https://kzprofile.kreedz.top/api/v1/'
+    baseURL: 'https://kzprofile-api.vercel.app/api/'
 })
 
 export async function PlayerRecords (identifier) {
@@ -28,7 +28,7 @@ export async function PlayerRecords (identifier) {
 }
 
 export async function SteamProfile (identifier) {
-    const url = 'steam'
+    const url = 'steam/profile'
 
     const steamid = await GetSteam64(identifier)
 
